@@ -1,7 +1,7 @@
 node {
     def legion = load legion()
 
-    legion.pod(ram: '1Gi') {
+    legion.pod(ram: '1Gi', image: 'nexus-local.cc.epm.kharlamov.biz:443/legion/dlab2') {
         stage('clone repo'){
             checkout scm
         }
